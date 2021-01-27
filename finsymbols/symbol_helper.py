@@ -35,10 +35,10 @@ def get_symbol_list(symbol_data, exchange_name):
 
 def save_file(file_path, file_data):
     if isinstance(file_data, str):
-        with open(file_path, "w") as saved_file:
+        with open(file_path, "w",encoding='utf-8') as saved_file:
             saved_file.write(file_data)
     elif isinstance(file_data, bytes):
-        with open(file_path, "wb") as saved_file:
+        with open(file_path, "wb",encoding='utf-8') as saved_file:
             saved_file.write(file_data.encode('utf-8'))
 
 
