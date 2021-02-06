@@ -42,7 +42,7 @@ def get_sp500_symbols():
         for symbol_data in symbol_raw_data:
             if(td_count == 0):
                 symbol_data_content[
-                    'symbol'] = symbol_data.text
+                    'symbol'] = symbol_data.text[:-1]
             elif(td_count == 1):
                 symbol_data_content[
                     'company'] = symbol_data.text
